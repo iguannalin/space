@@ -12,9 +12,11 @@ window.addEventListener("load", () => {
     words=r;
     for (let i = 0; i < getRandomInt(25,50); i++) {
       let text = document.createElement("a");
-      text.innerText = " a space is a " + words[getRandomInt(0,words.length)];
+      let rando = words[getRandomInt(0,words.length)];
+      rando = ((rando[0].match('^[aieouAIEOU].*')) ? "an ": "a ") + rando;
+      text.innerText = " a space is " + rando;
       container.appendChild(text);
-      text.onclick = (e) => {e.target.style.backgroundColor="black";e.target.innerText = e.target.innerText.replaceAll(/[a-z]/g, "_");e.target.style.zIndex=100;e.target.style.border="none";};
+      text.onclick = (e) => {e.target.style.backgroundColor="black";e.target.innerText = e.target.innerText.split("").map((l)=>l.replace(/[a-z]/g, Math.random()>0.7?".":"_")).join("");e.target.style.zIndex=100;e.target.style.border="none";};
     }
   });
 });
