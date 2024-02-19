@@ -12,9 +12,7 @@ window.addEventListener("load", () => {
     words=r;
     let ww = window.innerWidth/200;
     let hh = window.innerHeight/70;
-    console.log(ww,hh);
     for (let i = 0; i < getRandomInt(ww*hh,(ww*hh)+5); i++) {
-      console.log(i)
       let text = document.createElement("a");
       let rando = words[getRandomInt(0,words.length)];
       rando = ((rando[0].match('^[aieouAIEOU].*')) ? "an ": "a ") + rando;
