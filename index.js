@@ -16,7 +16,7 @@ window.addEventListener("load", () => {
       rando = ((rando[0].match('^[aieouAIEOU].*')) ? "an ": "a ") + rando;
       text.innerText = " a space is " + rando;
       container.appendChild(text);
-      text.onclick = (e) => {e.target.style.backgroundColor="black";e.target.innerText = e.target.innerText.split("").map((l)=>l.replace(/[a-z]/g, Math.random()>0.7?".":"_")).join("");e.target.style.border="none";};
+      text.onclick = (e) => {e.target.style.backgroundColor="black";e.target.innerText = e.target.innerText.split("").map((l)=>l.replace(/[a-z]/g, Math.random()>0.7?" ":"_")).join("");e.target.style.zIndex=11;e.target.style.border="none";};
     }
   });
 });
