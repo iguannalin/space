@@ -25,18 +25,14 @@ body {
   text-shadow: var(--shadow-color) -2px 2px 8px;
 }
 
-span, a {
-  cursor:help;
+a {
+  cursor: help;
   visibility: visible;
   padding: 8px 16px;
   box-sizing: border-box;
-  border-radius: 20px;;
+  border-radius: 20px;
   border: 1px solid red;
   word-break: keep-all;
   position: relative;
   z-index: 10;
-}
-
-span:hover {
-  visibility: hidden;
 }
