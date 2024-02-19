@@ -18,11 +18,21 @@ body {
   align-items: center;
   flex-flow: column;
   text-align: center;
-  margin: 0 25vw;
-  height: 100vh;
+  height: 90vh;
+  box-sizing: border-box;
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
   text-shadow: var(--shadow-color) -2px 2px 8px;
+}
+
+#container {
+  font-size: 16px;
+  max-width: 300px;
+}
+
+a:hover{
+  background-color: black;
+  z-index: 100;
 }
 
 a {
